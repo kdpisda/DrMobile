@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body class="yellow black-text" style="font-family: 'Raleway', sans-serif;">
+      <script type="text/javascript" src="/static/js/jquery-3.2.1.js"></script>
+      <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+      <script type="text/javascript">
+      $(document).on('click', 'a[href^="#"]', function (event) {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: $($.attr(this, 'href')).offset().top
+          }, 500);
+      });
+      $(document).ready(function(){
+          // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+          $('.modal').modal();
+          $('select').material_select();
+      });
+   
+      </script>
+
+          <nav class="black-text yellow">
+                  <div class="nav-wrapper black-text">
+                    <a href="#" class="brand-logo  black-text" style="margin-left:10%;">Dr. Mobile 247</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
+                      <li><a href="/" class="black-text">Home</a></li>
+                      <li><a href="#subscribe" class="black-text">Subscribe</a></li>
+                      <li><a href="/home/registration/" class="black-text modal-trigger">Register</a></li>
+                    </ul>
+                  </div>
+          </nav>
+
+          <!-- <footer class="page-footer yellow black-text">
+                <div class="container ">
+                  <div class="row">
+                    <div class="col l6 s12">
+                      <h5 class="black-text">Dr. Mobile247</h5>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                      <h5 class="black-text">Social Links</h5>
+                      <ul>
+                        <li><a class="blue-text text-darken-2" href="#!">Facebook</a></li>
+                        <li><a class="black-text" href="#!">Google</a></li>
+                        <li><a class="blue-text" href="#!">Twitter</a></li>
+                        <li><a class="pink-text" href="#!">Instagram</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-copyright black-text">
+                  <div class="container">
+                  © 2018 Copyright Text
+                  </div>
+                </div>
+              </footer> -->
+        
+
+              
+     <!-- Modal Structure -->
+        <!-- <div id="register" class="modal">
+            <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>     -->
+  <!--Import jQuery before materialize.js-->
+  
+</body>
+</html>

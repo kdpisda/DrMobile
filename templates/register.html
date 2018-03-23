@@ -1,0 +1,42 @@
+{% include 'base.html' %}
+<script>
+        $(document).ready(function(){
+                $("#name").keyup(function(){
+                        
+                });
+        });
+</script>
+<div class="container" style="padding-top:3%;">
+        <center><h3>Registration</h3></center>
+        <div class="card">
+                <div class="card-content">
+                        <form>
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name">
+
+                                <label for="mobile">Mobile Number</label>
+                                <input type="text" name="mobile" id="mobile">
+
+                                <label for="modelname">Model</label>
+                                <input type="text" name="model" id="modelname">
+
+                                <label for="pincode">Pin code</label>
+                                <input type="text" name="pincode" id="pincode">
+
+                                <label for="company">Company</label>
+                                <select name="company" id="company">
+                                        {% for obj in company %}
+                                    <option value="{{ obj.company }}">{{ obj.company }}</option>
+                                        {% endfor %}
+                                </select>
+                                <br>
+                               <center>
+                                        <button type="submit" class="btn orange">Register</button>
+                               </center>
+                        </form>
+                </div>
+            </div>  
+</div>
+<br>
+
+{% include 'footer.html' %}
