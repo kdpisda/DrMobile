@@ -1,4 +1,4 @@
-{% include 'base.html' %}
+    {% include 'base.html' %}
 <script>
         function FormValidate(){
                 var name = $("#name").val();
@@ -32,7 +32,7 @@
         <center><h3>Registration</h3></center>
         <div class="card">
                 <div class="card-content">
-                        <form action="#">
+                        <form action="/home/register/" method="POST">
                                 
                                 <label for="name">Name</label>
                                 <input type="text" name="name" id="name">
