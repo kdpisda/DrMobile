@@ -15,11 +15,9 @@ def verifyOtp(request):
 
 		otp = request.POST.get("otp")
 		authKey = "176332A81pH4L759c8aad6"
-		mobile = request.POST.get("number")
+		mobile = request.POST.get("mobile")
 
 		print(mobile)
-
-		token = request.POST.get("token")
 
 		print(token)
 
