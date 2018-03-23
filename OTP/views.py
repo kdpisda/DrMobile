@@ -19,8 +19,6 @@ def verifyOtp(request):
 
 		print(mobile)
 
-		print(token)
-
 		verifyOtpUrl = "https://control.msg91.com/api/verifyRequestOTP.php?authkey="+authKey+"&mobile=91"+str(mobile)+"&otp="+str(otp)+""
 
 		response = urllib2.urlopen(verifyOtpUrl).read()
