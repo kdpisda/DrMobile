@@ -21,13 +21,13 @@ def registration(request):
 
 def companyList(request):
     company = CompanyDetails.objects.values('company').distinct()
-
+    print(company)
     companyList = []
 
     for obj in company:
+        print(obj)
         tempData = {
-            "id":obj.id,
-            "company":obj.company
+            "company":obj['company']
         }
 
         companyList.append(tempData)

@@ -25,7 +25,7 @@ SECRET_KEY = 'xt=d&kp&oyyn4m38^^%+a$&al!s26gio6%_@3e!ej6ohqth5m7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dr-mobile.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

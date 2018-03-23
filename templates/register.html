@@ -1,16 +1,30 @@
 {% include 'base.html' %}
 <script>
-        $(document).ready(function(){
-                $("#name").keyup(function(){
-                        
-                });
-        });
+        function FormValidate(){
+                var name = $("#name").val();
+                var mobile = $("#mobile").val();
+                var model = $("#model").val();
+                var pincode = $("#pincode").val();
+                var company = $("#company").val();
+
+                var regexpname = /^[a-zA-Z ]+$/;
+                var regexpmob = /^[0-9]{10}$/;        
+                var regexppin = /^[0-9]{6}$/;        
+
+                if(!regexpname.test(name)){
+                        alert("Enter correct name");
+                }
+                if(!regexpmob.test(mobile)){
+                        alert("Enter proper mobile number");
+                }
+        }
 </script>
 <div class="container" style="padding-top:3%;">
         <center><h3>Registration</h3></center>
         <div class="card">
                 <div class="card-content">
                         <form>
+                                
                                 <label for="name">Name</label>
                                 <input type="text" name="name" id="name">
 
@@ -31,7 +45,7 @@
                                 </select>
                                 <br>
                                <center>
-                                        <button type="submit" class="btn orange">Register</button>
+                                        <button type="submit" class="btn orange" onclick="FormValidate()">Register</button>
                                </center>
                         </form>
                 </div>
