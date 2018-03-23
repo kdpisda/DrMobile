@@ -25,11 +25,7 @@ def companyList(request):
     companyList = []
 
     for obj in company:
-        print(obj)
-        tempData = {
-            "company":obj['company']
-        }
-
+        tempData = obj['company']
         companyList.append(tempData)
         tempData = {}
 

@@ -12,10 +12,16 @@
                 var regexppin = /^[0-9]{6}$/;        
 
                 if(!regexpname.test(name)){
-                        alert("Enter correct name");
+                        Materialize.toast('Enter correct name', 4000);
                 }
                 if(!regexpmob.test(mobile)){
-                        alert("Enter proper mobile number");
+                        Materialize.toast('Enter correct mobile number', 4000);
+                }
+                if(!regexppin.test(pincode)){
+                        Materialize.toast('Enter correct pincode', 4000);
+                }
+                if(model.val()==""){
+                        Materialize.toast('Enter a model', 4000);       
                 }
         }
 </script>
@@ -23,7 +29,7 @@
         <center><h3>Registration</h3></center>
         <div class="card">
                 <div class="card-content">
-                        <form>
+                        <form action="#">
                                 
                                 <label for="name">Name</label>
                                 <input type="text" name="name" id="name">
@@ -45,7 +51,7 @@
                                 </select>
                                 <br>
                                <center>
-                                        <button type="submit" class="btn orange" onclick="FormValidate()">Register</button>
+                                        <button class="btn orange" onclick="FormValidate()">Register</button>
                                </center>
                         </form>
                 </div>
